@@ -1,0 +1,12 @@
+*.swp
+.swp
+node_modules
+dist
+build
+.tmp
+.sass-cache
+bower_components
+
+.DS_Store
+npm-debug.log
+.idea
