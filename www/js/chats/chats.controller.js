@@ -1,25 +1,25 @@
 (function() {
-   'use strict';
+    'use strict';
 
     angular
         .module('app.chats')
         .controller('ChatsCtrl', ChatsCtrl)
-    ;   
+    ;
 
     ChatsCtrl.$inject = ['$q', 'ChatsDataService'];
 
-    /** 
+    /**
      *
      */
     function ChatsCtrl($q, Chats) {
         var vm = this;
-        var promises = []; 
-        
+        var promises = [];
+
         vm.remove = Remove;
 
-        vm.chats = Chats.all() .then( function(data){ vm.chats = data; });
+        vm.chats = Chats.all().then(function(data) { vm.chats = data; });
         promises.push(vm.chats);
-        
+
         function Remove(chat) {
             Chats.remove(chat);
         }
@@ -28,7 +28,7 @@
 
         /** **/
         function activate() {
-            return $q.all(promises).then(function() { }); 
-        }   
-    }   
+            return $q.all(promises).then(function() { });
+        }
+    }
 }).call(this);

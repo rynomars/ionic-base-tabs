@@ -1,0 +1,17 @@
+<ion-view view-title="Login">
+  <ion-content>
+    <form ng-submit="vm.submit()" name="login" class="form-signin" novalidate>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" name="username" ng-model="vm.username" class="form-control" placeholder="Email address or Username" required autofocus="">
+          </label>
+          <label class="item item-input">
+            <input type="password" name="passowrd" ng-model="vm.password" class="form-control" placeholder="Password" required>
+          </label>
+        </div>
+        <button ng-disabled="login.$invalid" class="button button-block button-positive" type="submit">
+          Login
+        </button>
+    </form>
+  </ion-content>
+</ion-view>

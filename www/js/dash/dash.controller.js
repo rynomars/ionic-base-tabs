@@ -4,11 +4,11 @@
     angular
         .module('app.dash')
         .controller('DashCtrl', DashCtrl)
-    ;   
+    ;
 
     DashCtrl.$inject = ['$q'];
 
-    /** 
+    /**
      *
      */
     function DashCtrl($q) {
@@ -19,7 +19,7 @@
 
         /** **/
         function activate() {
-            return $q.all(promises).then(function() { }); 
-        }  
+            return $q.all(promises).then(function() { });
+        }
     }
 }).call(this);

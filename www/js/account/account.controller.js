@@ -1,19 +1,19 @@
 (function() {
-   'use strict';
+    'use strict';
 
     angular
         .module('app.account')
         .controller('AccountCtrl', AccountCtrl)
-    ;   
+    ;
 
     AccountCtrl.$inject = ['$q'];
 
-    /** 
+    /**
      *
      */
     function AccountCtrl($q) {
         var vm = this;
-        var promises = []; 
+        var promises = [];
 
         vm.settings = {
             enableFriends: true
@@ -23,7 +23,7 @@
 
         /** **/
         function activate() {
-            return $q.all(promises).then(function() { }); 
-        }   
-    }   
+            return $q.all(promises).then(function() { });
+        }
+    }
 }).call(this);
