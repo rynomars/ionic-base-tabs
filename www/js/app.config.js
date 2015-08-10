@@ -2,7 +2,7 @@
     'use strict';
     angular.module('app')
         .config(appConfig)
-        .constant('API_URL', 'http://localhost:1337/')
+        .constant('API_URL', 'http://localhost:1337/api/')
     ;
 
     appConfig.$inject = ['$httpProvider'];
